@@ -1,0 +1,23 @@
+<!-- templates/files/home.html -->
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Sharing App</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Welcome to the File Sharing App</h1>
+    <p>Upload and share your files securely and easily.</p>
+
+    <nav>
+        <ul>
+            <li><a href="{% url 'upload_file' %}">Upload File</a></li>
+            <li><a href="{% url 'file_list' %}">View My Files</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

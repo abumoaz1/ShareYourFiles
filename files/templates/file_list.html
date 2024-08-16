@@ -1,0 +1,9 @@
+<h2>Your Files</h2>
+<ul>
+    {% for file in files %}
+    <li>{{ file.file.name }} - {{ file.description }} - {{ file.uploaded_at }}
+        <a href="{{ file.file.url }}" download>
+            <button style="margin-left: 10px; padding: 5px 10px;">Download</button>
+    </li>
+    {% endfor %}
+</ul>

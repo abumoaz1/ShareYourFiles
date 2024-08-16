@@ -1,0 +1,15 @@
+{% extends "user/index.html" %}
+{% block start %}
+
+<div class="content-section">
+    <form method="POST" class="form-container">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            {{ form}}
+        </fieldset>
+        <button class="submit-btn" type="submit">Sign up</button>
+        <p><a href="{% url 'login' %}">Already have an account?</a></p>
+    </form>
+</div>
+
+{% endblock start %}
